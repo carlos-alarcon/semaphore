@@ -28,6 +28,7 @@
       - git: repo=git@github.com:carlos-alarcon/semaphore.git
              dest={{ homedir }}
              version=gracefully_shutdown
+             accept_hostkey=yes
       - file: src=/usr/bin/nodejs dest=/usr/bin/node state=link
       - shell: bower install --allow-root && npm install > {{ homedir }}/somelog.txt
         args:
