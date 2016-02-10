@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env node
 
-cd /opt/semaphore/
-HOME=/root PORT=3000 node bin/semaphore.js
+process.env.HOME='/root';
+process.env.PORT=3000;
+require('../lib/app');
